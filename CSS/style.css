@@ -31,6 +31,24 @@
   border: 1px solid black;
 }
 
+.btn {
+  background-color: rgba(1, 28, 55, 0);
+  border: 4px solid #04042e;
+  border-radius: 10rem;
+  cursor: pointer;
+  font-size: 3rem;
+  overflow: hidden;
+  padding: 1.85rem 3rem;
+  position: relative;
+  /*transition: transform 400ms;*/
+  transition: all 450ms;
+}
+.btn:hover {
+  transform: scale(1.15);
+  background-color: #011c37;
+  color: white;
+}
+
 /* Media Queries */
 /* Styles pour mobile */
 @media only screen and (max-width: 480px) {

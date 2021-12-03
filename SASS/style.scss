@@ -23,6 +23,26 @@ $vrBgH: linear-gradient(to right, white, rgb(40, 40, 168));
     border: 1px solid black;
 }
 
+$cd-btn:rgb(4, 4, 46);
+$cd-btn-start: rgba(1, 28, 55, 0);
+$cd-btn-end: rgba(1, 28, 55, 1);
+.btn {
+    background-color: $cd-btn-start;
+    border: 4px solid $cd-btn;
+    border-radius: 10rem;
+    cursor: pointer;
+    font-size: 3rem;
+    overflow: hidden;
+    padding: 1.85rem 3rem;
+    position: relative;
+    /*transition: transform 400ms;*/
+    transition: all 450ms;
+    &:hover {
+        transform: scale(1.15); background-color: $cd-btn-end;
+        color: white;
+    }
+}
+
 /* Media Queries */
 /* Styles pour mobile */
 @media only screen and (max-width:480px){
