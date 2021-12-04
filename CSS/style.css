@@ -40,8 +40,9 @@
   overflow: hidden;
   padding: 1.85rem 3rem;
   position: relative;
-  /*transition: transform 400ms;*/
-  transition: all 450ms;
+  /*transition: transform 400ms;
+  transition: all 450ms;*/
+  transition: transform 450ms, background-color 300ms 150ms;
 }
 .btn:hover {
   transform: scale(1.15);
