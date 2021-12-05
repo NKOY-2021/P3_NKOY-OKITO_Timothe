@@ -1,54 +1,161 @@
-/* L'initialisation minimum 
+/* L'initialisation minimum */
 @import "Libs/minireset.scss";
-*/
+
 /* Variables */
-$vrBgH: linear-gradient(to right, white, rgb(40, 40, 168));
+$shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$bgGray: #F2F2F2;
+$colorR:  #FF79DA;
+$colorB:  #9356DC;
+$colorV:  #99E2D0;
+$colorRoseD: linear-gradient(to top left, $colorB, $colorR);
+/* Classe */
+.padLeft{ padding-left: 15px;}
+.iconColor{color: $colorB;}
+.badge{
+    display:inline-block;padding:.35em .65em;font-size:.75em;
+    font-weight:700;line-height:1;color:#fff;
+    text-align:center; white-space:nowrap;
+    vertical-align:baseline;border-radius:40px;
+    background: $colorB; 
+    transform: translate(-10px, 0);
+}
+.badge{position:relative;top:-1px}
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}
+.h1,h1{font-size:calc(1.375rem + 1.5vw)}
 
-.clsGlobal1{
-    display: flex; justify-content: space-between; border: 2px solid black;
+header{
     padding: 10px;
-}
-.clsTranslate{ 
-    width: 300px; height: 100px; background-color: yellow;
-    border: 1px solid black;
-    transform: translate(50px, 10px);
-    /*&:hover{
-        transform: translate(50px, 0)
-    };*/
-}
-.clsRotate{ transform: rotate(10deg); }
-.clsNormal{
-    width: 300px; height: 100px;
-    background-color: yellow;
-    border: 1px solid black;
-}
-
-$cd-btn:rgb(4, 4, 46);
-$cd-btn-start: rgba(1, 28, 55, 0);
-$cd-btn-end: rgba(1, 28, 55, 1);
-.btn {
-    background-color: $cd-btn-start;
-    border: 4px solid $cd-btn;
-    border-radius: 10rem;
-    cursor: pointer;
-    font-size: 3rem;
-    overflow: hidden;
-    padding: 1.85rem 3rem;
-    position: relative;
-    /*transition: transform 400ms;
-    transition: all 450ms;*/
-    transition: transform 450ms, background-color 300ms 150ms;
-    &:hover {
-        transform: scale(1.15); background-color: $cd-btn-end;
-        color: white;
-    }
 }
 
 /* Media Queries */
 /* Styles pour mobile */
 @media only screen and (max-width:480px){
     /* Layout Header */
-    a.clsMenu{display: none;}
-    div.clsEment{display: none;}
+    header{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        .logo{
+            width: 200px;
+        }
+    }
+    /* Layout Navigation */
+    nav{
+        background-color: $bgGray;
+        .navHead{
+            background-image:linear-gradient(to bottom,#bdbaba, #ebe7e7);
+            display: flex; flex-flow: row wrap; 
+            justify-content: center;
+            padding: 10px;
+            div{
+                margin-left: 15px;
+            }
+        }
+        .navBody{
+            display: flex; flex-flow: column wrap;
+            justify-content: center; align-items: center;
+            padding: 20px;padding-bottom: 30px; padding-top: 30px;
+            text-align: center;
+            div{
+                margin-bottom: 20px;
+            }
+            a{
+                display: block; text-decoration: none; color: white;
+                background-image: $colorRoseD;
+                padding: 20px; border-radius: 40px;
+                margin-top: 10px; margin-bottom: 10px;
+            }
+        }
+    }
+    /* Contenu */
+    .clsContent{
+        display: flex; flex-flow: column wrap; 
+        justify-content: center; 
+        margin-top: 30px; margin-bottom: 30px;
+        .contentTitle{
+            padding-left: 40px;
+        }
+        .contentBtn{
+            display: flex; flex-flow: column wrap; 
+            justify-content: center;  align-items: center;
+            a{
+                display: inline-flex; text-decoration: none; color: black;
+                height: 70px; width: 85%; outline: none;
+                border-radius: 20px; overflow: visible;
+                font-size: 16px; font-weight: 500; 
+                align-items: center; margin-top: 25px;
+                box-shadow: $shadow; padding-right: 50px;
+                background-color: $bgGray;                
+            }
+            .bgRose{background-image: linear-gradient(to top left, rgb(183, 183, 207), rgb(245, 233, 240));}
+            
+        }
+    }
+
+    .clsResto{
+        background-color: $bgGray;
+        section{
+            padding: 30px 15px 30px 10px;
+            .clsGallery{
+                display: flex; flex-flow: column wrap;
+                justify-content: center; align-items: center;
+                .polaroid {
+                    width: 95%;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    border-radius: 10px;
+
+                    .container {
+                        display: flex; flex-flow: row nowrap;
+                        justify-content: space-between;
+                        padding: 10px;
+                        .clsLove{
+                            text-decoration: none;
+                            &:hover{
+                                color: $colorR;
+                            }
+                        }
+                        .clsNew{
+                            background-color: $colorV;
+                            width: 90px; margin: 0; padding: 10px;
+                            text-align: center;
+                            transform: translate(40px, -200px);
+                        }
+                    }
+                    
+                    .clsImg{
+                        width:100%;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+                  }
+            }
+
+        }
+
+        /* Pied de page */
+        footer{
+            background-color: black; color: white;
+            display: flex; flex-flow: column wrap;
+            align-items: flex-start; padding: 20px;
+        }
+
+    }
+
+    
+
+}
+
+/* Styles pour tablette */
+@media only screen and (min-width:481px) and (max-width:768px){
+    /* Layout Header */
+    
+
+}
+
+/* Styles pour PC */
+@media only screen and (min-width:769px){
+    /* Layout Header */
+    
 
 }
