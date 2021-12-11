@@ -1,7 +1,6 @@
 /* L'initialisation minimum */
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand:ital,wght@0,100;1,300&display=swap");
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -46,6 +45,12 @@ td, th {
   padding: 0;
 }
 
+/* Police de l'appli mobile */
+/* Police des titres */
+@font-face {
+  font-family: "Shrikhand";
+  src: url(/CSS/Font_titre/Shrikhand-Regular.otf);
+}
 /* Variables */
 body {
   font-family: "Roboto";
@@ -58,6 +63,10 @@ body {
 
 .iconColor {
   color: #9356DC;
+}
+
+.iconColorG {
+  color: gray;
 }
 
 .badge {
@@ -89,6 +98,11 @@ body {
 
 .h1, h1 {
   font-size: calc(1.375rem + 1.5vw);
+}
+
+.clsTailleIconF {
+  font-size: medium;
+  margin-right: 10px;
 }
 
 header {
@@ -136,6 +150,9 @@ header {
   nav .navBody div {
     margin-bottom: 20px;
   }
+  nav .navBody .ClsDecouv {
+    font-size: large;
+  }
   nav .navBody a {
     display: block;
     text-decoration: none;
@@ -156,7 +173,7 @@ header {
     margin-bottom: 30px;
   }
   .clsContent .contentTitle {
-    padding-left: 40px;
+    padding-left: 20px;
   }
   .clsContent .contentBtn {
     display: flex;
@@ -192,6 +209,9 @@ header {
   .clsResto section {
     padding: 30px 15px 30px 10px;
   }
+  .clsResto section h1 {
+    margin-bottom: 20px;
+  }
   .clsResto section .clsGallery {
     display: flex;
     flex-flow: column wrap;
@@ -218,6 +238,7 @@ header {
   }
   .clsResto section .clsGallery .polaroid .container .clsNew {
     background-color: #99E2D0;
+    color: green;
     width: 90px;
     margin: 0;
     padding: 10px;
@@ -241,13 +262,15 @@ header {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
-    padding: 10px;
+    padding: 30px;
   }
   .clsResto footer div {
     margin-bottom: 10px;
   }
   .clsResto footer .footTitle {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-size: larger;
+    font-family: "Shrikhand";
   }
 }
 /* Styles pour tablette */
