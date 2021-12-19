@@ -48,7 +48,7 @@ header{
         justify-content: center;
         align-items: center;
         .logo{
-            width: 200px;
+            width: 150px;
         }
     }
     /* Layout Navigation */
@@ -70,6 +70,7 @@ header{
             text-align: center;
             div{
                 margin-bottom: 20px;
+                h1{ font-weight: bold;}
             }
             .ClsDecouv{font-size:large;}
             a{

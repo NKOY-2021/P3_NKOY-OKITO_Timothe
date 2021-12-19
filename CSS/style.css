@@ -120,7 +120,7 @@ header {
     align-items: center;
   }
   header .logo {
-    width: 200px;
+    width: 150px;
   }
 
   /* Layout Navigation */
@@ -149,6 +149,9 @@ header {
   }
   nav .navBody div {
     margin-bottom: 20px;
+  }
+  nav .navBody div h1 {
+    font-weight: bold;
   }
   nav .navBody .ClsDecouv {
     font-size: large;

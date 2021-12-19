@@ -1,0 +1,186 @@
+/* L'initialisation minimum */
+@import "Libs/minireset.scss";
+/* Police de l'appli mobile */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
+/* Police des titres */
+@font-face {
+    font-family: 'Shrikhand';
+    src: url(/CSS/Font_titre/Shrikhand-Regular.otf);
+  }
+
+/* Variables */
+$shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$bgGray: #F2F2F2;
+$colorR: #FF79DA;
+$colorB: #9356DC;
+$colorV: #99E2D0;
+$colorG: gray;
+$colorRoseD: linear-gradient(to top left, $colorB, $colorR);
+body{font-family: 'Roboto'}
+/* Classe */
+.padLeft{ padding-left: 15px;}
+.iconColor{color: $colorB;}
+.iconColorG{color: $colorG;}
+.badge{
+    display:inline-block;padding:.35em .65em;font-size:.75em;
+    font-weight:700;line-height:1;color:#fff;
+    text-align:center; white-space:nowrap;
+    vertical-align:baseline;border-radius:40px;
+    background: $colorB; 
+    transform: translate(-10px, 0);
+}
+.badge{position:relative;top:-1px}
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}
+.h1,h1{font-size:calc(1.375rem + 1.5vw)}
+.clsTailleIconF{ font-size: medium; margin-right: 10px;}
+
+header{
+    padding: 10px;
+}
+.padMenu{ padding: 10px; }
+
+/* Media Queries */
+/* Styles pour mobile */
+@media only screen and (max-width:480px){
+    /* Layout Header */
+    header{
+        display: flex;                
+        a{
+            text-decoration: none; display: inline-block;
+        }
+        .clsContHead{
+            display: flex;
+            flex-flow: row wrap; justify-content: center;
+            width: 100%;
+            .logo{
+                width: 150px;
+            }
+        }
+    }
+    /* Layout Contenu */
+    .clsLove{
+        text-decoration: none; color: rgb(92, 89, 89);
+        &:hover{ color: $colorR;
+        }
+    }
+    .clsTitle{
+        font-family: 'Shrikhand'; font-size: 24px;
+    }
+    .clsContenu{
+        background-color: $bgGray;
+        .contentTitle{
+            display: flex; flex-flow: row wrap; 
+            justify-content: space-between;
+            background-color: $bgGray;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            transform: translate(0, -50px);
+            
+            padding-left: 20px; padding-right: 30px;
+            padding-top: 30px; padding-bottom: 10px;
+        }
+        .menuEntrees{
+            display: flex; flex-flow: column wrap;
+            justify-content: center; margin-top: 20px;
+            transform: translate(0, -50px);
+            .menu_Title{
+                font-size: 20px; padding-left: 5px;
+                h2{
+                    display: inline-block;
+                    padding-bottom: 5px; position: relative;
+                }
+                h2:after{
+                    content: ""; position: absolute;
+                    width: 50%; height: 1px;
+                    bottom: -5px; left: 0%;
+                    border-bottom: 5px solid $colorV;
+                }
+                              
+            }
+            .contentBtn{
+                display: flex; flex-flow: column wrap;
+                .button{
+                    display: inline-flex; 
+                    justify-content: space-between;
+                    height: 90px; padding: 0; margin-top: 20px;
+                    background: white;
+                    box-shadow: 0 4px 8px 0 rgba(255, 254, 254, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    border: none; outline: none;
+                    border-radius: 20px; overflow: hidden;
+                    cursor: pointer;
+                    font-size: 18px;
+
+                    .button__text{
+                        width: 100%; 
+                        padding: 20px;
+                        .button__text_0{text-align: left;}
+                        .button__text_1{
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+                        }
+                    }
+                    .button__icon{
+                        display: none;
+                        text-decoration: none;
+                    }
+                    &:hover .button__icon{
+                        background: $colorV; color:white;
+                        display: inline-flex;
+                        align-items: center;
+                        padding: 0 24px;
+                        height: 100%; font-size: 30px;
+                    }
+                }
+
+                
+                
+
+            }
+            
+        }
+
+        /* Bouton commander */
+        .btnCmd{
+            display: flex; flex-flow: column wrap;
+            justify-content: center; align-items: center;
+            text-align: center;
+            
+            a{
+                display: block; text-decoration: none; color: white;
+                background-image: $colorRoseD; width: 250px;
+                padding: 20px; border-radius: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        /* Pied de page */
+        footer{
+            background-color: black; color: white;
+            display: flex; flex-flow: column wrap;
+            align-items: flex-start; padding: 30px;
+            div{ margin-bottom: 10px;}
+            .footTitle{
+                margin-bottom: 20px; font-size:larger;
+                font-family: 'Shrikhand';
+            }
+
+        }
+    }/* Fin Contenu */
+    
+
+}
+
+/* Styles pour tablette */
+@media only screen and (min-width:481px) and (max-width:768px){
+    /* Layout Header */
+    
+
+}
+
+/* Styles pour PC */
+@media only screen and (min-width:769px){
+    /* Layout Header */
+    
+
+}
