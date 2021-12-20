@@ -109,8 +109,23 @@ header {
   padding: 10px;
 }
 
-/* Media Queries */
-/* Styles pour mobile */
+/* Contenu Restaurants */
+a.clsLove2 {
+  display: none;
+  text-decoration: none;
+  color: black;
+}
+
+.clsLove1 {
+  text-decoration: none;
+  color: black;
+}
+
+/*.polaroid a{
+    display: block; text-decoration: none; color: black;
+}
+*/
+/* Media Queries : Styles pour mobile */
 @media only screen and (max-width: 480px) {
   /* Layout Header */
   header {
@@ -232,11 +247,16 @@ header {
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 10px;
+    /*.clsLove1{
+        text-decoration: none;
+        &:hover{ color: $colorR; }
+    }*/
   }
-  .clsResto section .clsGallery .polaroid .container .clsLove {
-    text-decoration: none;
+  .clsResto section .clsGallery .polaroid .container .clsBtnHover:hover .clsLove1 {
+    display: none;
   }
-  .clsResto section .clsGallery .polaroid .container .clsLove:hover {
+  .clsResto section .clsGallery .polaroid .container .clsBtnHover:hover .clsLove2 {
+    display: inline-block;
     color: #FF79DA;
   }
   .clsResto section .clsGallery .polaroid .container .clsNew {

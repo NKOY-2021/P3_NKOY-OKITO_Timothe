@@ -34,13 +34,21 @@ body{font-family: 'Roboto'}
 .h1,h1{font-size:calc(1.375rem + 1.5vw)}
 .clsTailleIconF{ font-size: medium; margin-right: 10px;}
 
-header{
-    padding: 10px;
-}
+header{ padding: 10px; }
 
-/* Media Queries */
-/* Styles pour mobile */
+/* Contenu Restaurants */
+
+a.clsLove2{ display: none; text-decoration: none; color: black;}
+.clsLove1{ text-decoration: none; color: black;}
+
+/*.polaroid a{
+    display: block; text-decoration: none; color: black;
+}
+*/
+
+/* Media Queries : Styles pour mobile */
 @media only screen and (max-width:480px){
+    
     /* Layout Header */
     header{
         display: flex;
@@ -81,6 +89,7 @@ header{
             }
         }
     }
+
     /* Contenu */
     .clsContent{
         display: flex; flex-flow: column wrap; 
@@ -123,12 +132,20 @@ header{
                         display: flex; flex-flow: row nowrap;
                         justify-content: space-between;
                         padding: 10px;
-                        .clsLove{
-                            text-decoration: none;
-                            &:hover{
+                        
+                        .clsBtnHover{
+                            &:hover .clsLove1{
+                                display: none;
+                            }
+                            &:hover .clsLove2{
+                                display: inline-block;
                                 color: $colorR;
                             }
                         }
+                        /*.clsLove1{
+                            text-decoration: none;
+                            &:hover{ color: $colorR; }
+                        }*/
                         .clsNew{
                             background-color: $colorV; color: green;
                             width: 90px; margin: 0; padding: 10px;
