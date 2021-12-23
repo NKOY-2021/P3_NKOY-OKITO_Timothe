@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
+/* Police des titres */
+@font-face {
+    font-family: 'Shrikhand';
+    src: url(/CSS/Font_titre/Shrikhand-Regular.otf);
+}
+.clsTailleIconF{ font-size: medium; margin-right: 10px;}
+
+@import "./Libs/2_reset", "./Libs/3_typo";
+@import "./Fonction_Variable/1_variables", "./Fonction_Variable/2_mixin", "./Fonction_Variable/4_maps";
+@import "./Layout/2_header", "./Layout/3_footer", "./Layout/4_about", "./Layout/5_howto", "./Layout/1_loader";
+@import "./StructureP3/1_maps","./StructureP3/2_btnAbout", "./StructureP3/3_btnHowto";
+@import "./StructureP3/4_fonctionnement";
