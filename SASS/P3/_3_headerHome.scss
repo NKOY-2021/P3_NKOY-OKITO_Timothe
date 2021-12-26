@@ -1,0 +1,6 @@
+/* Layout Header */
+.header_home{ 
+    margin: 0; padding: 0.3rem;
+    text-align: center; box-shadow: $boxShadow;
+    position: relative; /* Pour que le box-shadow du header passe au-dessous */
+}
