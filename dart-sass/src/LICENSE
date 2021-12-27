@@ -247,7 +247,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 --------------------------------------------------------------------------------
 
-charcode, http_parser, oauth2, path, pool, shelf_web_socket, source_maps,
+charcode, http_parser, oauth2, path, pool, shelf_web_socket, source_ville,
 source_span, stack_trace, string_scanner and yaml license:
 
 Copyright 2014, the Dart project authors. All rights reserved.

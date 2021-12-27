@@ -1,0 +1,308 @@
+/* L'initialisation minimum */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap");
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+/* Police de l'appli mobile */
+/* Police des titres */
+@font-face {
+  font-family: "Shrikhand";
+  src: url(/CSS/Font_titre/Shrikhand-Regular.otf);
+}
+/* Variables */
+body {
+  font-family: "Roboto";
+}
+
+/* Classe */
+.padLeft {
+  padding-left: 15px;
+}
+
+.iconColor {
+  color: #9356DC;
+}
+
+.iconColorG {
+  color: gray;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 40px;
+  background: #9356DC;
+  transform: translate(-10px, 0);
+}
+
+.badge {
+  position: relative;
+  top: -1px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.h1, h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+.clsTailleIconF {
+  font-size: medium;
+  margin-right: 10px;
+}
+
+header {
+  padding: 10px;
+}
+
+/* Contenu Restaurants */
+a.clsLove2 {
+  display: none;
+  text-decoration: none;
+  color: black;
+}
+
+.clsLove1 {
+  text-decoration: none;
+  color: black;
+}
+
+/*.polaroid a{
+    display: block; text-decoration: none; color: black;
+}
+*/
+/* Media Queries : Styles pour mobile */
+@media only screen and (max-width: 480px) {
+  /* Layout Header */
+  header {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  header .logo {
+    width: 150px;
+  }
+
+  /* Layout Navigation */
+  nav {
+    background-color: #F2F2F2;
+  }
+  nav .navHead {
+    background-image: linear-gradient(to bottom, #bdbaba, #ebe7e7);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+  nav .navHead div {
+    margin-left: 15px;
+  }
+  nav .navBody {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+  }
+  nav .navBody div {
+    margin-bottom: 20px;
+  }
+  nav .navBody div h1 {
+    font-weight: bold;
+  }
+  nav .navBody .ClsDecouv {
+    font-size: large;
+  }
+  nav .navBody a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+    padding: 20px;
+    border-radius: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Contenu */
+  .clsContent {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .clsContent .contentTitle {
+    padding-left: 20px;
+  }
+  .clsContent .contentBtn {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .clsContent .contentBtn a {
+    display: inline-flex;
+    text-decoration: none;
+    color: black;
+    height: 70px;
+    width: 85%;
+    outline: none;
+    border-radius: 20px;
+    overflow: visible;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+    margin-top: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-right: 50px;
+    background-color: #F2F2F2;
+  }
+  .clsContent .contentBtn .bgRose {
+    background-image: linear-gradient(to top left, #b7b7cf, #f5e9f0);
+  }
+
+  .clsResto {
+    background-color: #F2F2F2;
+    /* Pied de page */
+  }
+  .clsResto section {
+    padding: 30px 15px 30px 10px;
+  }
+  .clsResto section h1 {
+    margin-bottom: 20px;
+  }
+  .clsResto section .clsGallery {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .clsResto section .clsGallery .polaroid {
+    width: 95%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .clsResto section .clsGallery .polaroid .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 10px;
+    /*.clsLove1{
+        text-decoration: none;
+        &:hover{ color: $colorR; }
+    }*/
+  }
+  .clsResto section .clsGallery .polaroid .container .clsBtnHover:hover .clsLove1 {
+    display: none;
+  }
+  .clsResto section .clsGallery .polaroid .container .clsBtnHover:hover .clsLove2 {
+    display: inline-block;
+    color: #FF79DA;
+  }
+  .clsResto section .clsGallery .polaroid .container .clsNew {
+    background-color: #99E2D0;
+    color: green;
+    width: 90px;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    transform: translate(40px, -200px);
+  }
+  .clsResto section .clsGallery .polaroid .clsImg {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .clsResto section .clsGallery .polaroid .clsImgS {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .clsResto footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    padding: 30px;
+  }
+  .clsResto footer div {
+    margin-bottom: 10px;
+  }
+  .clsResto footer .footTitle {
+    margin-bottom: 20px;
+    font-size: larger;
+    font-family: "Shrikhand";
+  }
+}
+/* Styles pour tablette */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* Layout Header */
+}
+/* Styles pour PC */
+@media only screen and (min-width: 769px) {
+  /* Layout Header */
+}
+
+/*# sourceMappingURL=style.css.map */
