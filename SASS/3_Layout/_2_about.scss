@@ -4,6 +4,13 @@
       font-weight: bold;
     }
     p {
-      color: #4d4d4d;
+      color: #4d4d4d; 
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
+  .btn__about{
+    button{
+      font-size: 1rem; padding: 1rem;
+    };
   }
+}

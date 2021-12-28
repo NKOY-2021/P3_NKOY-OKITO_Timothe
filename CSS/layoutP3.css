@@ -90,6 +90,12 @@ body, html {
 }
 .about p {
   color: #4d4d4d;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.about .btn__about button {
+  font-size: 1rem;
+  padding: 1rem;
 }
 
 .howto__title {
@@ -152,7 +158,10 @@ body, html {
 }
 
 .restaurant__title h3 {
-  padding: 30px 0px 0px 10px;
+  padding: 30px 0px 0px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .restaurant__title h3 {
@@ -298,9 +307,9 @@ footer {
 
 h3 {
   font-family: "Shrikhand", "sans-serif";
-  padding: 5px 0 20px 0;
   font-size: 1.2rem;
   font-weight: 500;
+  margin-left: 45px;
 }
 
 ul {
@@ -339,7 +348,7 @@ ul li a {
 .fonctionnement ol li {
   position: relative;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2.5rem;
   flex-grow: 1;
   border-radius: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -362,10 +371,11 @@ ul li a {
 .fonctionnement ol li:hover {
   transform: scale(1.03);
   opacity: 0.9;
+  background-image: linear-gradient(to bottom right, #c5a4ec, #fafaf5);
 }
 .fonctionnement ol i.fas {
   margin-right: 1rem;
-  color: blue;
+  color: #4d4d4d;
 }
 .fonctionnement h2 {
   padding-left: 2rem;
