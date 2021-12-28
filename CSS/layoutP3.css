@@ -321,6 +321,56 @@ ul li a {
   margin-right: 5px;
 }
 
+.fonctionnement {
+  counter-reset: steps;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.fonctionnement ol {
+  display: flex;
+  gap: 2rem;
+  padding-right: 1rem;
+}
+@media (max-width: 1000px) {
+  .fonctionnement ol {
+    flex-direction: column;
+  }
+}
+.fonctionnement ol li {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform 200ms;
+}
+.fonctionnement ol li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356DC;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
+.fonctionnement ol li:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+.fonctionnement ol i.fas {
+  margin-right: 1rem;
+  color: blue;
+}
+.fonctionnement h2 {
+  padding-left: 2rem;
+}
+
 .maps {
   background: #eaeaea;
   display: flex;
@@ -337,6 +387,189 @@ ul li a {
   margin-top: 5px;
   text-align: center;
   width: 150px;
+}
+
+.btn__about button {
+  background-image: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 10px 5px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 4px 4px 6px #aaa;
+  cursor: pointer;
+}
+.btn__about button:hover {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  box-shadow: 4px 4px 6px #000;
+}
+
+.howto__button {
+  margin: 0 20px 20px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #f6f6f6;
+  border: 5px solid #f6f6f6;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px #fff;
+  font-weight: bold;
+  box-shadow: 4px 4px 6px #e9e9e9;
+}
+@media screen and (min-width: 768px) {
+  .howto__button {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .howto__button {
+    margin: 70px 0;
+  }
+}
+
+.new {
+  color: #008766;
+  background: #99E2D0;
+  border: 5px solid #99E2D0;
+  border-radius: 5px;
+  position: absolute;
+  right: 1%;
+  top: 5%;
+}
+
+.fill {
+  color: black;
+  cursor: pointer;
+}
+.fill:hover {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.header__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.menu__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arrow {
+  position: absolute;
+  left: 20px;
+}
+
+.menu__title {
+  font-family: Shrikhand, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+@media screen and (min-width: 1280px) {
+  .menu__title {
+    padding: 10px 90px;
+  }
+}
+
+.meals {
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 4px 4px 6px #aaa;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
+}
+.meals:hover {
+  padding-right: 75px;
+}
+.meals:hover .cross {
+  opacity: 1;
+  transform: translate(-50px);
+}
+.meals:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+
+.last__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5em;
+}
+
+.last__line p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 1280px) {
+  .last__line p {
+    padding-right: 20px;
+  }
+}
+
+.last__line span {
+  margin-right: 5px;
+}
+
+.meals h4 {
+  margin: 0;
+}
+
+.starter h3, .dish h3, .dessert h3 {
+  padding-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.btn__order button {
+  background-image: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 10px 5px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 4px 4px 6px #aaa;
+  cursor: pointer;
+  margin: 30px 0;
+  padding: 20px;
+  width: 50%;
+}
+@media screen and (min-width: 1280px) {
+  .btn__order button {
+    width: 25%;
+  }
+}
+.btn__order button:hover {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  box-shadow: 4px 4px 6px #000;
+}
+
+.btn__order {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=layoutP3.css.map */

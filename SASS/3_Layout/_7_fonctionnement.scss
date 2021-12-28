@@ -1,0 +1,43 @@
+.fonctionnement{
+    counter-reset: steps;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    ol{
+        display: flex; gap: 2rem;
+        padding-right: 1rem;
+        @media (max-width: 1000px){ flex-direction: column; }
+        li{
+            position: relative;
+            &::before{
+                content: counter(steps);
+                counter-increment: steps;
+
+                color: white;
+                background-color: $color-primary;
+                display: grid;
+                width: 2rem; height: 2rem;
+                place-items: center;
+                border-radius: 50%; position: absolute;
+                bottom: 1rem;
+                left: -1rem;
+            }
+            background-color: #f6f6f6;
+            padding: 1rem 2rem;
+            flex-grow: 1;
+            border-radius: 2rem;
+            @include ombre-fonct;
+
+            transition: transform 200ms;
+            &:hover{
+                @include zoom-fonct;
+                //transform: scale(1.02);
+                opacity: 0.9;
+            }
+        }
+        i.fas{
+            margin-right: 1rem;
+            color: blue;
+        }
+    }
+    h2{ padding-left: 2rem;}
+}
