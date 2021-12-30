@@ -74,6 +74,8 @@ body, html {
     opacity: 1;
   }
 }
+/* menu-title */
+/* repas */
 .menu__header h1 {
   text-align: center;
   font-family: Shrikhand, Roboto, sans-serif;
@@ -235,12 +237,13 @@ body, html {
 }
 
 .main__menu {
-  background-color: #f6f6f6;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  background-color: #fcf9f9;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   width: 100%;
   position: relative;
   margin-top: -50px;
+  padding: 10px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -282,8 +285,8 @@ body, html {
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  width: 50px;
-  height: 63px;
+  width: 70px;
+  height: 90px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;
@@ -296,12 +299,14 @@ body, html {
 .cross .fa-check-circle {
   color: #fff;
   transition: transform 500ms ease-in-out;
+  text-align: center;
 }
 
 .line {
   width: 40px;
   border: 2px solid #99E2D0;
-  margin-left: 10px;
+  /* haut | droit | bas | gauche */
+  margin: 5px 0px 15px 18px;
 }
 
 footer {
@@ -464,6 +469,7 @@ ul li a {
 .fill {
   color: black;
   cursor: pointer;
+  transition: animation 2s;
 }
 .fill:hover {
   animation: fill 0.3s ease-in-out;
@@ -503,11 +509,16 @@ ul li a {
 }
 
 .menu__title {
-  font-family: Shrikhand, sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  /* haut | droit | bas | gauche */
+  padding: 40px 40px 40px 10px;
+}
+.menu__title h2 {
+  font-family: Shrikhand, sans-serif;
+  padding-left: 10px;
+  font-size: 1.8rem;
 }
 @media screen and (min-width: 1280px) {
   .menu__title {
@@ -515,10 +526,11 @@ ul li a {
   }
 }
 
-.meals {
+.repas {
   background-color: #fff;
   border-radius: 15px;
   margin: 10px;
+  margin-bottom: 15px;
   padding: 10px;
   box-shadow: 4px 4px 6px #aaa;
   position: relative;
@@ -528,15 +540,22 @@ ul li a {
   overflow: hidden;
   transition: padding-right 450ms ease-in-out;
 }
-.meals:hover {
+.repas:hover {
   padding-right: 75px;
 }
-.meals:hover .cross {
+.repas:hover .cross {
   opacity: 1;
-  transform: translate(-50px);
+  transform: translate(-49px);
 }
-.meals:hover .fa-check-circle {
+.repas:hover .cross span {
+  padding: 10px;
+}
+.repas:hover .fa-check-circle {
+  margin: auto;
   transform: rotate(360deg);
+}
+.repas h4 {
+  font-size: 1.2rem;
 }
 
 .last__line {
@@ -562,14 +581,15 @@ ul li a {
   margin-right: 5px;
 }
 
-.meals h4 {
+.repas h4 {
   margin: 0;
 }
 
-.starter h3, .dish h3, .dessert h3 {
-  padding-left: 10px;
-  text-transform: uppercase;
-  margin-bottom: 5px;
+.starter span, .dish span, .dessert span {
+  margin: 0;
+  padding-left: 18px;
+  padding-top: 20px;
+  font-size: large;
 }
 
 .btn__order button {

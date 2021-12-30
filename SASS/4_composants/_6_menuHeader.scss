@@ -27,8 +27,8 @@
       padding: 10px 90px;
     }
   }
-  .meals {
-    @include meals;
+  .repas {
+    @include repas;
   }
   .last__line {
     display: flex;
@@ -48,13 +48,14 @@
   .last__line span {
     margin-right: 5px;
   }
-  .meals h4 {
+  .repas h4 {
     margin: 0;
+    
   }
-  .starter h3, .dish h3, .dessert h3 {
-    padding-left: 10px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
+  .starter span, .dish span, .dessert span {
+    margin: 0;
+    padding-left: 18px; padding-top: 20px;
+    font-size: large;    
   }
   .btn__order button {
     @include btn-about;

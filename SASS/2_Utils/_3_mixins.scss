@@ -85,24 +85,31 @@
   align-items: center;
 }
 @mixin main-menu {
-  background-color: #f6f6f6;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  background-color: rgb(252, 249, 249);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   width: 100%;
   position: relative;
   margin-top: -50px;
+  padding: 10px;
 }
 @mixin menu-title {
-  font-family: Shrikhand, sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  /* haut | droit | bas | gauche */
+  padding: 40px 40px 40px 10px;
+  h2{
+    font-family: Shrikhand, sans-serif;
+    padding-left: 10px;
+    font-size: 1.8rem;
+  }
 }
-@mixin meals {
+/* menu-title */
+@mixin repas {
   background-color: #fff;
   border-radius: 15px;
-  margin: 10px;
+  margin: 10px; margin-bottom: 15px;
   padding: 10px;
   box-shadow: 4px 4px 6px #aaa;
   position: relative;
@@ -116,20 +123,24 @@
   }
   &:hover .cross {
     opacity: 1;
-    transform: translate(-50px);
+    transform: translate(-49px);
+  }
+  &:hover .cross span{
+    padding: 10px;
   }
   &:hover .fa-check-circle {
+    margin:auto;
     transform: rotate(360deg) ;
   }
-}
+  h4{ font-size: 1.2rem; }
+}/* repas */
 
 @mixin cross {
-  display: flex;
-  justify-content: center;
+  display: flex; justify-content: center;
   align-items: center;
   background-color: $color-tertiary;
-  width: 50px;
-  height: 63px;
+  width: 70px;
+  height: 90px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   position: absolute;
@@ -141,6 +152,7 @@
   & .fa-check-circle {
     color: #fff;
     transition: transform 500ms ease-in-out;
+    text-align: center;
   }
 }
 @mixin tablet {
