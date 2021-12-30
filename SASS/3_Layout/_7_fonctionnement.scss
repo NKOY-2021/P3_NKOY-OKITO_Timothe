@@ -24,19 +24,25 @@
             background-color: #f6f6f6;
             padding: 1.5rem 2.5rem;
             flex-grow: 1;
-            border-radius: 2rem;
+            border-radius: 2.4rem;
+            font-weight: bold;
             @include ombre-fonct;
 
-            transition: transform 200ms;
+            transition: transform 2s, box-shadow 2s, background-image 2s, color 2s;
             &:hover{
                 @include zoom-fonct;
                 opacity: 0.9;
-                background-image: linear-gradient(to bottom right, #c5a4ec, rgb(250, 250, 245));
+                background-image: linear-gradient(to bottom left, #c5a4ec, rgb(250, 250, 245));
+                
+                i.fas{
+                    color: $color-primary;
+                }
             }
         }
         i.fas{
             margin-right: 1rem;
-            color: #4d4d4d;
+            color: #949393;
+            font-size: 1.4rem;            
         }
     }
     h2{ padding-left: 2rem;}

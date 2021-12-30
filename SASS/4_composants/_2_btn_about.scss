@@ -1,9 +1,10 @@
 .btn__about button{
     @include btn-about;
     &:hover {
-      background-color: lighten(#9356dc, 10%);
-      background-blend-mode: lighten;
-      box-shadow: 4px 4px 6px #000;
+      transform: translate(0, 30px);
+      background-image: $linear-gradientHover;
+      box-shadow: 4px 4px 6px rgb(34, 33, 33);
+
     }
   }
   

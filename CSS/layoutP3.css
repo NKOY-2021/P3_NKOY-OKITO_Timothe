@@ -94,8 +94,11 @@ body, html {
   padding-right: 1.5rem;
 }
 .about .btn__about button {
-  font-size: 1rem;
-  padding: 1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  padding: 1.2rem;
+  font-weight: normal;
 }
 
 .howto__title {
@@ -158,7 +161,9 @@ body, html {
 }
 
 .restaurant__title h3 {
-  padding: 30px 0px 0px 20px;
+  margin: 0;
+  /* haut | droit | bas | gauche */
+  padding: 50px 0px 0px 20px;
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
@@ -350,9 +355,10 @@ ul li a {
   background-color: #f6f6f6;
   padding: 1.5rem 2.5rem;
   flex-grow: 1;
-  border-radius: 2rem;
+  border-radius: 2.4rem;
+  font-weight: bold;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: transform 200ms;
+  transition: transform 2s, box-shadow 2s, background-image 2s, color 2s;
 }
 .fonctionnement ol li::before {
   content: counter(steps);
@@ -371,11 +377,15 @@ ul li a {
 .fonctionnement ol li:hover {
   transform: scale(1.03);
   opacity: 0.9;
-  background-image: linear-gradient(to bottom right, #c5a4ec, #fafaf5);
+  background-image: linear-gradient(to bottom left, #c5a4ec, #fafaf5);
+}
+.fonctionnement ol li:hover i.fas {
+  color: #9356DC;
 }
 .fonctionnement ol i.fas {
   margin-right: 1rem;
-  color: #4d4d4d;
+  color: #949393;
+  font-size: 1.4rem;
 }
 .fonctionnement h2 {
   padding-left: 2rem;
@@ -400,19 +410,19 @@ ul li a {
 }
 
 .btn__about button {
-  background-image: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  border: 1px solid transparent;
+  background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  border: none;
   border-radius: 30px;
-  padding: 10px 5px;
-  color: #fff;
-  font-weight: bold;
-  box-shadow: 4px 4px 6px #aaa;
+  color: white;
+  box-shadow: 4px 4px 6px #9e9d9d;
   cursor: pointer;
+  font-weight: bold;
+  transition: transform 2s, background-image 2s, box-shadow 2s;
 }
 .btn__about button:hover {
-  background-color: #ae80e5;
-  background-blend-mode: lighten;
-  box-shadow: 4px 4px 6px #000;
+  transform: translate(0, 30px);
+  background-image: linear-gradient(to right, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  box-shadow: 4px 4px 6px #222121;
 }
 
 .howto__button {
@@ -554,14 +564,14 @@ ul li a {
 }
 
 .btn__order button {
-  background-image: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  border: 1px solid transparent;
+  background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  border: none;
   border-radius: 30px;
-  padding: 10px 5px;
-  color: #fff;
-  font-weight: bold;
-  box-shadow: 4px 4px 6px #aaa;
+  color: white;
+  box-shadow: 4px 4px 6px #9e9d9d;
   cursor: pointer;
+  font-weight: bold;
+  transition: transform 2s, background-image 2s, box-shadow 2s;
   margin: 30px 0;
   padding: 20px;
   width: 50%;
