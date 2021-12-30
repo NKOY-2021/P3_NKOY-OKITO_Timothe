@@ -74,7 +74,7 @@ body, html {
     opacity: 1;
   }
 }
-.cls_header h1 {
+.menu__header h1 {
   text-align: center;
   font-family: Shrikhand, Roboto, sans-serif;
 }
@@ -491,6 +491,15 @@ ul li a {
 .arrow {
   position: absolute;
   left: 20px;
+}
+.arrow a i.fas {
+  font-weight: bold;
+  transition: color 2s, transform 2s, font-size 2s;
+}
+.arrow a:hover i.fas {
+  color: #99E2D0;
+  transform: translate(-10px, 0px);
+  font-size: 2rem;
 }
 
 .menu__title {

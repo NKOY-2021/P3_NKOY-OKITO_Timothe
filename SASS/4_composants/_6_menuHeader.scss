@@ -1,14 +1,25 @@
 .header__img img{
-    object-fit: cover;
-    width: 100%;
-    height: 250px;
-  }
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
   .menu__header {
     @include menu-header;
   }
   .arrow {
     position: absolute;
     left: 20px;
+    a{
+      i.fas{ 
+        font-weight: bold;
+        transition: color 2s, transform 2s, font-size 2s;
+      }
+      &:hover i.fas{
+        color: $color-tertiary;
+        transform: translate(-10px, 0px);
+        font-size: 2rem;
+      }
+    }
   }
   .menu__title {
     @include menu-title;
