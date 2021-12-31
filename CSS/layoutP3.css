@@ -246,6 +246,9 @@ body, html {
   padding: 10px;
 }
 
+.full__menu .starter, .full__menu .dish, .full__menu .dessert {
+  margin-top: 40px;
+}
 @media screen and (min-width: 1280px) {
   .full__menu {
     display: flex;
@@ -513,7 +516,7 @@ ul li a {
   justify-content: space-between;
   align-items: center;
   /* haut | droit | bas | gauche */
-  padding: 40px 40px 40px 10px;
+  padding: 40px 40px 0px 10px;
 }
 .menu__title h2 {
   font-family: Shrikhand, sans-serif;
@@ -559,10 +562,16 @@ ul li a {
 }
 
 .last__line {
+  height: 30px;
+  margin: auto;
+  width: 100%;
+}
+
+.last__line {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  line-height: 1.5em;
 }
 
 .last__line p {

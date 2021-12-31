@@ -30,11 +30,15 @@
   .repas {
     @include repas;
   }
+  .last__line{
+    height: 30px; margin:auto;
+    width: 100%;
+  }
   .last__line {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    line-height: 1.5em;
   }
   .last__line p {
     margin: 0;
