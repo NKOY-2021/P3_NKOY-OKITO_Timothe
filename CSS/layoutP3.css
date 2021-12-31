@@ -602,6 +602,7 @@ ul li a {
 }
 
 .btn__order button {
+  font-size: 1.2rem;
   background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   border: none;
   border-radius: 30px;
