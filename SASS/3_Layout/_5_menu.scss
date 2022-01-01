@@ -1,38 +1,41 @@
 .main__menu {
-    @include main-menu;
+  @include main-menu;
   }
-  .full__menu {
-    .starter, .dish, .dessert{ margin-top: 40px; }
-    @include desktop {
-      display: flex;
-      justify-content: space-around;
-    }
+.full__menu {
+  .starter, .dish, .dessert{ margin-top: 40px; }
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
   }
-  .starter {
-    animation: fadein 3s ease-in-out;
-    @include desktop {
-      width: 400px;
-    }
+}
+.starter {
+  animation: fadein 3s ease-in-out;
+  @include desktop {
+    width: 400px;
   }
-  .dish {    
-    animation: fadein 6s ease-in-out;
-    @include desktop {
-      width: 400px; 
-    }
+}
+.dish {    
+  animation: fadein 6s ease-in-out;
+  @include desktop {
+    width: 400px; 
   }
-  .dessert {
-    animation: fadein 9s ease-in-out;
-    @include desktop {
-      width: 400px;
-    }
+}
+.dessert {
+  animation: fadein 9s ease-in-out;
+  @include desktop {
+    width: 400px;
   }
-  .cross {
-    @include cross;
-  }
-  .line {
-    width: 40px;
-    border: 2px solid $color-tertiary;
-    /* haut | droit | bas | gauche */
-    margin: 5px 0px 15px 18px;
-  }
-  
+}
+.cross {
+  @include cross;
+}
+.line {
+  width: 40px;
+  border: 2px solid $color-tertiary;
+  /* haut | droit | bas | gauche */
+  margin: 5px 0px 15px 18px;
+}
+.main__menu_order{
+  background-color: $bg-menu;
+  padding-bottom: 30px;
+} 

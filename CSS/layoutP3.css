@@ -237,7 +237,7 @@ body, html {
 }
 
 .main__menu {
-  background-color: #fcf9f9;
+  background-color: whitesmoke;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   width: 100%;
@@ -312,9 +312,15 @@ body, html {
   margin: 5px 0px 15px 18px;
 }
 
+.main__menu_order {
+  background-color: whitesmoke;
+  padding-bottom: 30px;
+}
+
 footer {
   background-color: #353535;
-  padding: 25px;
+  padding: 10px 0px 10px 0px;
+  /* haut | droit | bas | gauche */
   color: white;
 }
 
