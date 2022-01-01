@@ -22,6 +22,11 @@
   cursor: pointer; font-weight: bold;
   transition: transform 2s, background-image 2s, box-shadow 2s;
 }
+@mixin btn-hover{
+  transform: translate(0, 30px);
+  background-image: $linear-gradientHover;
+  box-shadow: 4px 4px 6px rgb(34, 33, 33);
+}
 @mixin howto-number {
   display: flex;
   justify-content: center;
