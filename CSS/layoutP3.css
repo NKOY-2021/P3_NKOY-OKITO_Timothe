@@ -28,7 +28,7 @@ body {
   display: grid;
   place-items: center;
   position: fixed;
-  background-color: red;
+  background-image: radial-gradient(circle, #FF79DA, #99E2D0, #9356DC);
   height: 100vh;
   inset: 0;
   z-index: 2;
@@ -37,10 +37,14 @@ body {
   transform-origin: top;
 }
 .loader::after {
-  content: "Hello";
+  content: "";
   height: 100px;
   width: 100px;
-  animation: animaton_spin 3s infinite linear;
+  border-right: 15px solid transparent;
+  border-top: 15px solid white;
+  border-radius: 50%;
+  animation: animaton_spin 1s ease-in-out;
+  animation-iteration-count: 2;
 }
 
 /* Animation de loader */

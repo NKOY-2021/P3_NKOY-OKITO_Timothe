@@ -19,7 +19,8 @@
   /* Gestion de la classe loader */
 .loader{
   display: grid; place-items: center;
-  position: fixed; background-color: red;
+  position: fixed; 
+  background-image: radial-gradient(circle, $color-secondary, $color-tertiary, $color-primary);
   height: 100vh; inset: 0;
   z-index: 2; opacity: 0.9;
 
@@ -29,10 +30,14 @@
 
   // Animer l'élément
   &::after{
-    content: "Hello";
+    content: "";
     height: 100px;
     width: 100px;
-    animation: animaton_spin 3s infinite linear;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+    border-radius: 50%;
+    animation: animaton_spin 1s ease-in-out;
+    animation-iteration-count: 2;
   }
 
 }
