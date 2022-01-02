@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -22,10 +23,47 @@ body {
   font-size: 1rem;
 }
 
+/* Gestion de la classe loader */
+.loader {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  background-color: red;
+  height: 100vh;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.9;
+  animation: animaton_chargement 200ms 3s forwards;
+  transform-origin: top;
+}
+.loader::after {
+  content: "Hello";
+  height: 100px;
+  width: 100px;
+  animation: animaton_spin 3s infinite linear;
+}
+
+/* Animation de loader */
+@keyframes animaton_chargement {
+  to {
+    transform: scale(0);
+  }
+}
+/* Animation de l'élément */
+@keyframes animaton_spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 body, html {
   font-family: "Roboto", sans-serif;
 }
 
+/* 
+h1, h2, h3, h4{
+    font-family: Shrikhand, Roboto, sans-serif;
+}
+*/
 @keyframes grow {
   0%, 100% {
     -webkit-transform: scaleY(1);
@@ -44,6 +82,7 @@ body, html {
     -webkit-transform: rotate(360deg);
   }
 }
+/*
 @keyframes loader {
   0% {
     opacity: 1;
@@ -55,6 +94,7 @@ body, html {
     opacity: 0;
   }
 }
+*/
 @keyframes fadein {
   from {
     opacity: 0;

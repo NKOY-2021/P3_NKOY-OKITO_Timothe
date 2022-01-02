@@ -15,3 +15,33 @@
     width: 100%;
     font-size: 1rem;
   }
+
+  /* Gestion de la classe loader */
+.loader{
+  display: grid; place-items: center;
+  position: fixed; background-color: red;
+  height: 100vh; inset: 0;
+  z-index: 2; opacity: 0.9;
+
+  // Animer le loader
+  animation: animaton_chargement 200ms 3s forwards;
+  transform-origin: top;
+
+  // Animer l'élément
+  &::after{
+    content: "Hello";
+    height: 100px;
+    width: 100px;
+    animation: animaton_spin 3s infinite linear;
+  }
+
+}
+/* Animation de loader */
+@keyframes animaton_chargement{
+  to{ transform: scale(0); }
+}
+
+/* Animation de l'élément */
+@keyframes animaton_spin{
+  to{ transform: rotate(360deg); }
+}
