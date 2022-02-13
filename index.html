@@ -4,15 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Accueil</title>
+        <!--
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script src="https://kit.fontawesome.com/c54af9963b.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-
+        
         <link href="./CSS/layoutP3.css" rel="stylesheet" type="text/css" >
-
+        -->
         <!-- CDN Framework -->
         <script src="https://kit.fontawesome.com/c54af9963b.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
       	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 		
         <!-- Latest compiled and minified CSS -->
@@ -20,6 +22,15 @@
         <!-- Latest compiled JavaScript -->
       	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         
+        <style>
+            /* Carousel */
+            .img-cont{ height: 500px; overflow: hidden;  }
+            .img-slideC{ width:100%; height: 100%; object-fit: cover; }
+            .hCarousel {
+                color: white; font-family: 'Shrikhand', serif;
+                text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            }
+        </style>
     </head>
     <body>
         <!-- Barre Header -->
@@ -85,6 +96,77 @@
             </div>
             
         </header>
+
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel" >
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+          
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner"> <!-- Image n°1 -->
+              <div class="carousel-item active img-cont">
+                <img src="Images/Materiel.jpg" alt="Palm Oil" class="d-block img-slideC">
+               
+                <div class="carousel-caption">
+                  <h3 class="hCarousel display-6 mb-5">CLIM - CHAUFFAGE - FROID</h3>
+                  <button type="button" class="btn btn-primary border border-white mb-5">OBTENIR UN DEVIS</button>
+                  <!-- 
+                  <p>
+                    Several products available such as palm oil, palmnut cream, palmsoup...
+                    <a class="btn btn-success btn-sm" href="#" data-bs-toggle="dropdown" title="Click for more information about the products Palm oil">
+                      <i class="bi bi-info-circle-fill fs-4 text-white"></i>
+                    </a>
+                  </p>-->
+                </div>
+             
+                </div><!-- Fin Image n°1 -->
+          
+              <div class="carousel-item img-cont"> <!-- Début Image n°2 -->
+                <img src="Images/clim1.jpg" alt="Starchy foods" class="d-block img-slideC">
+                
+                <div class="carousel-caption">
+                    <h3 class="hCarousel display-6 mb-5">CLIM - CHAUFFAGE - FROID</h3>
+                    <button type="button" class="btn btn-primary border border-white mb-5">OBTENIR UN DEVIS</button>
+                  <!--<p>
+                    Several starch products such as Cocoyam Fufu, Manioc Fufu, Plantain Fufu...
+                    <a class="btn btn-success btn-sm" href="#" data-bs-toggle="dropdown" title="Click for more information on starchy foods">
+                      <i class="bi bi-info-circle-fill fs-4 text-white"></i>
+                    </a>
+                  </p>-->
+                </div>
+                
+              </div> <!-- Fin Image n°2 -->
+          
+              <div class="carousel-item img-cont"> <!-- Début Image n°3 -->
+                <img src="Images/pompeChaleur2.jpg" alt="Dairy products" class="d-block img-slideC">
+                
+                <div class="carousel-caption">
+                    <h3 class="hCarousel display-6 mb-5">CLIM - CHAUFFAGE - FROID</h3>
+                    <button type="button" class="btn btn-primary border border-white mb-5">OBTENIR UN DEVIS</button>
+                  <!-- <p>
+                    Several dairy products such as blue band, Milo or Nido milk powder, White Oats Kwaker...
+                    <a class="btn btn-success btn-sm" href="#" data-bs-toggle="dropdown" title="Click for more information on Dairy products">
+                      <i class="bi bi-info-circle-fill fs-4 text-white"></i>
+                    </a>
+                  </p> -->
+                </div>
+                
+              </div> <!-- Fin Image n°3 -->
+          
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-secondary"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-secondary"></span>
+            </button>
+        </div> <!-- Fin carousel -->
+        
 
     </body>
 </html>
